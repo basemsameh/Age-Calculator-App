@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary  */
+  --Purple: #854dff;
+  --Light-red: #ff5757;
+  /* ### Neutral  */
+  --White: #ffffff;
+  --Off-white: #f0f0f0;
+  --Light-grey: #dbdbdb;
+  --Smokey-grey: #716f6f;
+  --Off-black: #141414;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Off-white);
+}
+
+main {
+  margin: 80px auto;
+  padding: 30px 15px;
+  background-color: var(--White);
+  width: 320px;
+  border-radius: 10px 10px 100px;
+}
+
+main form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+main form section label {
+  font-size: 12px;
+  color: var(--Smokey-grey);
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+main form section input {
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--Off-black);
+  font-size: 18px;
+  border: 1px solid var(--Light-grey);
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+main form section input:focus {
+  outline: 1px solid var(--Purple);
+}
+
+main form section:nth-of-type(1) input {
+  width: 80px;
+}
+
+main form section:nth-of-type(2) input {
+  width: 80px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main form section input::placeholder {
+  font-weight: 700;
+}
+
+main form section p {
+  display: none;
+}
+
+main form .wrong label {
+  color: var(--Light-red);
+}
+
+main form .wrong input {
+  border-color: var(--Light-red);
+}
+
+main form .wrong p {
+  font-size: 8px;
+  color: var(--Light-red);
+}
+
+main form button {
+  background-image: url(assets/images/icon-arrow.svg);
+  background-color: var(--Purple);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+  height: 40px;
+  width: 40px;
+  padding: 25px;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  top: 35px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+main form button:hover {
+  background-color: var(--Off-black);
+}
+
+hr {
+  border: 0.5px solid var(--Off-white);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+main h1 {
+  font-style: italic;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+main h1 span {
+  color: var(--Purple);
+}
+
+@media (min-width: 600px) {
+  main {
+    width: 450px;
+    height: 400px;
+    padding: 30px;
+  }
+
+  main form button {
+    top: 65px;
+    right: -10px;
+  }
+
+  hr {
+    margin: 30px 0 20px;
+  }
+
+  main h1 {
+    font-size: 50px;
+  }
+}
